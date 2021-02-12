@@ -1,8 +1,7 @@
-import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+it ('testing calculator', ()=>{
+  let action = this.state.value('10/2+6*8-3')
+  let newState  = App(action)
+  expect(newState.state.result).toBe(50)
+})
